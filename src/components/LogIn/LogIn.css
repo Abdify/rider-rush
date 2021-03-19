@@ -1,0 +1,83 @@
+.log-in{
+    width: 100%;
+}
+.log-in-form{
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1rem;
+    border: 1px solid;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.log-in-form > * {
+    width: 90%;
+    margin: 1rem;
+    border: none;
+    outline: none;
+    
+}
+.log-in-form input{
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid black;
+    color: tomato;
+}
+.submit-btn{
+    padding: 0.8rem;
+    background-color: tomato;
+    color: white;
+}
+.form-bottom{
+    display: flex;
+    justify-content: space-between;
+}
+.link-text{
+    text-decoration: none;
+    color: tomato;
+}
+.error{
+    color: red;
+    max-width: 90%;
+
+}
+
+.divider{
+    display: block;
+    text-align: center;
+    margin: 1rem 0;
+    position: relative;
+}
+.divider::before, .divider::after{
+    content: '';
+    position: absolute;
+    width: 10%;
+    top: 10px;
+    border-bottom: 1px solid;
+    color: lightgray;
+}
+.divider::before{
+    left: 38%;
+}
+.divider::after{
+    right: 38%;
+}
+.other-log-in-btn{
+    width: 300px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    background-color: transparent;
+    padding: 1rem;
+    border: 1px solid;
+    border-radius: 50px;
+    color: black;
+    transition: 0.5s all;
+}
+.other-log-in-btn:hover{
+     background-color: tomato;
+     color: white;
+}
