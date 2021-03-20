@@ -1,17 +1,16 @@
 import { faUserFriends } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useContext } from "react";
-import { MapContainer } from "../MapContainer/MapContainer";
+import Map from "../MapContainer/MapContainer";
 import { locationContext } from "../Navigate/Navigate";
 
 const LocationSearchResult = ({ vehicle }) => {
     const [locationFrom, setLocationFrom, locationTo, setLocationTo] = useContext(locationContext);
 
-    // useEffect(() => {
-    //     fetch(
-    //         `https://api.mapbox.com/directions/v5/mapbox/driving/-122.42,37.78;-77.03,38.91?access_token=pk.eyJ1IjoiYWJkaWZ5IiwiYSI6ImNrbWgydzNreTAzZHMyb3Q0ZzA4dWxxbzUifQ.4q9Ovi_sOiAxKTGDfy7tww`
-    //     ).then((data) => console.log(data));
-    // }, [])
+    const location = {
+        lat: 23.8103,
+        lng: 90.4125,
+    };
 
     return (
         <div className="location-container">
@@ -41,7 +40,7 @@ const LocationSearchResult = ({ vehicle }) => {
                         );
                     })}
             </div>
-            <MapContainer />
+            <Map location={location} zoomLevel={10} />
         </div>
     );
 };

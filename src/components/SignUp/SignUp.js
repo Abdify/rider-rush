@@ -54,6 +54,7 @@ const SignUp = () => {
             .then((result) => {
                 const user = result.user;
                 setCurrentUser(user);
+                history.replace(from);
             })
             .catch((error) => {
                 // Handle Errors

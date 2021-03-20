@@ -33,7 +33,6 @@ const Home = () => {
                                 backgroundImage: `linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(${vehicle.image})`, backgroundSize: '160%', backgroundRepeat: 'no-repeat'
                             }}
                         >
-                            {/* <img src={vehicle.image} alt="vehicle image" /> */}
                             <h2>{vehicle.type}</h2>
                         </Link>
                     );

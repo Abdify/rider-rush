@@ -20,7 +20,7 @@ const Navigate = () => {
             setVehicle(res.data());
         });
     }, []);
-    console.log(vehicleType, vehicle);
+    // console.log(vehicleType, vehicle);
     return (
         <locationContext.Provider
             value={[locationFrom, setLocationFrom, locationTo, setLocationTo]}

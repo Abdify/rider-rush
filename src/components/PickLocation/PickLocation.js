@@ -1,5 +1,5 @@
 import React, { useContext, useRef } from 'react';
-import { MapContainer } from '../MapContainer/MapContainer';
+import Map from '../MapContainer/MapContainer';
 import { locationContext } from '../Navigate/Navigate';
 import '../Navigate/Navigate.css';
 
@@ -15,6 +15,11 @@ const PickLocation = () => {
         setLocationTo(locationToRef.current.value);
     }
 
+    const location = {
+        lat: 23.8103,
+        lng: 90.4125,
+    };
+
     return (
         <div className="location-search">
             <form className="location-search-form" onSubmit={handleLocationSearch}>
@@ -24,7 +29,7 @@ const PickLocation = () => {
                 <input type="text" placeholder="select place" required ref={locationToRef} />
                 <button className="btn submit-btn">Search</button>
             </form>
-            <MapContainer />
+            <Map location={location} zoomLevel={10} />
         </div>
     );
 };

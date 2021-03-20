@@ -1,27 +1,16 @@
-import { GoogleApiWrapper, Map } from "google-maps-react";
-import React, { Component } from "react";
+import GoogleMapReact from "google-map-react";
+import React from "react";
 
-const mapStyles = {
-    width: "50%",
-    height: "100%",
-};
+const Map = ({ location, zoomLevel }) => (
+    <div className="map">
+        <h2 className="map-h2">Result Found:</h2>
+        <p>
+            error-messages#api-not-activated-map-error <br/><br/> I don't have any credit card to activate map key!!
+        </p>
+        <div className="google-map">
+            <GoogleMapReact defaultCenter={location} defaultZoom={zoomLevel}></GoogleMapReact>
+        </div>
+    </div>
+);
 
-export class MapContainer extends Component {
-    render() {
-        return (
-            <Map
-                google={this.props.google}
-                zoom={14}
-                style={mapStyles}
-                initialCenter={{
-                    lat: 23.8,
-                    lng: 90.4,
-                }}
-            />
-        );
-    }
-}
-
-export default GoogleApiWrapper({
-    apiKey: "YOUR_GOOGLE_MAPS_API_KEY_GOES_HERE",
-})(MapContainer);
+export default Map;
