@@ -7,4 +7,4 @@ Search any location and instantly get any vehicle available:
 - Train
 No need to worry about tickets anymore :)
 
-(Live view the site)[https://rider-rush.netlify.app/]
+[https://rider-rush.netlify.app/](Live view the site)
