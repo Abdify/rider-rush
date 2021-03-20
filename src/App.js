@@ -2,9 +2,9 @@ import { createContext, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home/Home';
-import LocationSelection from './components/LocationSelection/LocationSelection';
 import LogIn from './components/LogIn/LogIn';
 import Nav from './components/Nav/Nav';
+import Navigate from './components/Navigate/Navigate';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import SignUp from './components/SignUp/SignUp';
 
@@ -21,7 +21,7 @@ function App() {
                       <Home />
                   </Route>
                   <PrivateRoute exact path="/go/:vehicleType">
-                    <LocationSelection />
+                    <Navigate />
                   </PrivateRoute>
                   <Route exact path="/login">
                       <LogIn />

@@ -1,35 +1,87 @@
-nav{
+.topnav {
+    overflow: hidden;
+    position: sticky;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    z-index: 1111;
     width: 80%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    z-index: 1;
 }
-.logo{
-    width: 100px;
-    height: 100px;
-    background-image: url("../../images/logo123.png");
-    background-size: 100%;
-    cursor: pointer;
-}
-.nav-items{
+
+.nav-items {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.nav-items li{
-    display: block;
+.nav-items li,
+.nav-items div {
+    display: inline-block;
     padding: 1rem;
     list-style: none;
+    transition: 0.5s all;
 }
-.nav-items li:hover{
+.nav-items li:hover {
     background-color: black;
-    color: white;
 }
-.login-btn{
+
+.logo {
+    width: 100px;
+    height: 100px;
+    background-image: url("../../images/logo123.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    cursor: pointer;
+}
+.login-btn {
     width: 100px;
     padding: 10px 0;
     border-radius: 5px;
+}
+
+.topnav .icon {
+    margin: 10px;
+    font-size: 1.5rem;
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .topnav{
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .nav-items * {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+    .nav-items li,
+    .nav-items div {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .topnav.responsive {
+        position: relative;
+    }
+    .topnav.responsive .nav-items * {
+        display: block;
+        width: 100%;
+        background-color: black;
+    }
+    .topnav.responsive .nav-items {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
 }

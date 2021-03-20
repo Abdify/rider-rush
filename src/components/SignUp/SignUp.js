@@ -39,7 +39,7 @@ const SignUp = () => {
                 history.replace(from);
             })
             .catch((error) => {
-                var errorMessage = error.message;
+                const errorMessage = error.message;
                 setError(errorMessage);
             })
             :
@@ -52,12 +52,12 @@ const SignUp = () => {
         const provider = new firebase.auth.GoogleAuthProvider();
         auth.signInWithPopup(provider)
             .then((result) => {
-                var user = result.user;
+                const user = result.user;
                 setCurrentUser(user);
             })
             .catch((error) => {
-                // Handle Errors here.
-                var errorMessage = error.message;
+                // Handle Errors
+                const errorMessage = error.message;
                 setError(errorMessage);
             });
     }

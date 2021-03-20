@@ -13,7 +13,7 @@ const LogIn = () => {
 
     let history = useHistory();
     let location = useLocation();
-    let { from } = location.state || { from: { pathname: "/go/bus" } };
+    let { from } = location.state || { from: { pathname: "/go/buses" } };
 
     function handleLogIn(e){
         e.preventDefault();
@@ -31,7 +31,6 @@ const LogIn = () => {
                 history.replace(from);
             })
             .catch((error) => {
-                const errorCode = error.code;
                 const errorMessage = error.message;
                 setError(errorMessage)
             });
@@ -41,12 +40,11 @@ const LogIn = () => {
         const provider = new firebase.auth.GoogleAuthProvider();
         auth.signInWithPopup(provider)
             .then((result) => {
-                var credential = result.credential;
                 var user = result.user;
                 setCurrentUser(user);
             })
             .catch((error) => {
-                // Handle Errors here.
+                // Handle Errors
                 var errorMessage = error.message;
                 setError(errorMessage);
                 

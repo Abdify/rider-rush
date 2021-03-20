@@ -4,22 +4,22 @@ import { firestore } from '../../firebase';
 import ImageCredits from '../ImageCredits/ImageCredits';
 import './Home.css';
 
-const Home = () => {
-    const [vehicles, setVehicles] = useState([]);
 
-    //Load data
-    const vehiclesRef = firestore.collection('vehicles');
-    useEffect(() => {
-        vehiclesRef.get()
-        .then(res => {
-            let vehiclesList = [];
-            res.forEach(vehicle => {
-                console.log(vehicle.data())
-                vehiclesList.push(vehicle.data());
+const Home = () => {
+        const [vehicles, setVehicles] = useState([]);
+
+        //Load data from firestore
+        const vehiclesRef = firestore.collection("vehicles");
+        useEffect(() => {
+            vehiclesRef.get().then((res) => {
+                let vehiclesList = [];
+                res.forEach((vehicle) => {
+                    console.log(vehicle.data());
+                    vehiclesList.push(vehicle.data());
+                });
+                setVehicles(vehiclesList);
             });
-            setVehicles(vehiclesList);
-        })
-    }, []);
+        }, []);
 
     return (
         <div className="home">

@@ -16,8 +16,6 @@
 .log-in-form > * {
     width: 90%;
     margin: 1rem;
-    border: none;
-    outline: none;
     
 }
 .log-in-form input{

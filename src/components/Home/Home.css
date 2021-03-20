@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
     background-image: url("../../images/observation-urban-building-business-steel.jpg");
     background-size: 100% 100%;
     background-position: center;
@@ -27,4 +28,17 @@
 .credit{
     position: absolute;
     bottom: 0;
+}
+
+@media (max-width: 768px){
+    .vehicle-box{
+        width: 90%;
+        margin-top: 20px;
+    }
+    .vehicle-box:first-child{
+        margin-top: 110px;
+    }
+    .credit{
+        position: relative;
+    }
 }
