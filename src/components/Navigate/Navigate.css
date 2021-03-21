@@ -16,6 +16,7 @@
 }
 .location-search{
     display: flex;
+    justify-content: space-around;
 }
 
 .location-search-form input{

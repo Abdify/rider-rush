@@ -40,7 +40,7 @@ const LocationSearchResult = ({ vehicle }) => {
                         );
                     })}
             </div>
-            <Map location={location} zoomLevel={10} />
+            <Map />
         </div>
     );
 };
