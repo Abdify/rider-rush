@@ -89,12 +89,12 @@ const SignUp = () => {
                 <input
                     type="password"
                     ref={passwordRef}
-                    pattern="(?=.*\d)(?=.*[a-z]).{6,}"
+                    pattern="^(?=.*[A-Za-z\s])(?=.*\d)[A-Za-z\d\s]{6,}$"
                     required
                     placeholder="password"
                     onInvalid={(e) =>
                         e.target.setCustomValidity(
-                            "Passwords without numbers and less than 6 characters are not passwords!"
+                            "Must contain at least one  number and one letter, and at least 6 or more characters"
                         )
                     }
                 />

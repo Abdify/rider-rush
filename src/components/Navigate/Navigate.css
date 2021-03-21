@@ -66,9 +66,7 @@
     .location-search{
         flex-direction: column;
     }
-    .navigate-box{
-        margin: 0;
-    }
+    
     .location-search-form{
         width: 100%;
     }
